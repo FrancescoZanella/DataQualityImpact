@@ -85,8 +85,8 @@ To implement the pipeline for each of the 10 experiments, i followed these steps
   • **Data Analysis on Cleaned Dataset**: After having applied Data Preparation to
   the datasets I reapply regression to compare the results with those obtained using
   the polluted datasets.
+![Pipeline](images/implementation.png)
 
-![Failed to load image]([URL](https://github.com/FrancescoZanella/DataQualityImpact/blob/main/images/implementation.png))
 
 ### Data Pollution
 The data pollution function is used to contaminate the dataset by adding outliers to it.
@@ -146,7 +146,8 @@ in red, while the remaining points are shown in blue. The more the experiment is
 more the distance between outliers and not outliers grows as we can see in the example
 down here.
 
-![Failed to load image](URL)
+![Outliers](images/Screenshot 2024-02-24 152924.png)
+
 
 ###  Data Analysis on Polluted Datasets
 After introducing the outliers, we assess the performance of various regression algorithms
@@ -163,7 +164,7 @@ for algorithm in REGRESSION_ALGORITHMS :
     results_for_each_percentage_polluted . append ( result )
   results_for_each_algorithm_polluted.append(results_for_each_percentage_polluted )
 ```
-
+![Analysis](images/1.png)
 ### Data preparation
 In this phase, I need to remove the previously introduced outliers. Several removal methods
 have been tried, but the most effective one appears to be DBSCAN, a clustering-based
@@ -229,8 +230,8 @@ to create a plot for each metric and a table with the numeric results to compare
 the analysis before having cleaned the dataset.
 Plot for experiment 0 for performance metric:
 
-![Failed to load image](URL)
 
+![Analysis](images/2.png)
 
 ## Result Analysis
 Analyzing the RMSE and train-test distance graphs reveals that the trend, regardless of
