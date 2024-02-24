@@ -146,7 +146,7 @@ in red, while the remaining points are shown in blue. The more the experiment is
 more the distance between outliers and not outliers grows as we can see in the example
 down here.
 
-![Outliers](images/Screenshot 2024-02-24 152924.png)
+![Outliers](images/3.png)
 
 
 ###  Data Analysis on Polluted Datasets
