@@ -25,8 +25,8 @@ seed =2023
 )
 
 ```
-An explanation of the most significant parameters and the rationale behind their selection:
-- **n_samples**: A dataset with 1000 samples might be deemed sufficiently representative to address the complexity of the problem. This size can capture variations in
+An explanation of the most significant parameters and the rationale behind their selection:
+- **n_samples**: A dataset with 1000 samples might be deemed sufficiently representative to address the complexity of the problem. This size can capture variations in
 the data and provide a reliable basis for analysis.
 - **n_features**: I kept 3 features to enhance visualization, manage model complexity,
 and reduce computational requirements, ensuring a focused analysis on key variables for interpretation and understanding of relationships.
@@ -35,7 +35,7 @@ measurement errors or missing information regarding relevant variables not expli
 incorporated in the model. This contributes to creating a more realistically complex
 dataset by accounting for unmodeled factors or uncertainties in the relationship
 between features and the target variable.
-- **noise**: Setting noise to 10 introduces realistic variability based on empirical observations, enhancing the dataset’s realism. This choice reflects uncertainties and
+- **noise**: Setting noise to 10 introduces realistic variability based on empirical observations, enhancing the dataset’s realism. This choice reflects uncertainties and
 measurement errors, contributing to a more authentic representation and improving
 the practicality of the regression analysis.
 
@@ -76,7 +76,7 @@ To implement the pipeline for each of the 10 experiments, i followed these steps
   • **Data pollution**: Through a dataset pollution function for each experiment outliers
   are randomly introduced at varying distances and with different percentages.
   
-  • **Data Analysis on Polluted Datasets**: For each experiment and for each percentage of introduced outliers (5 % to 50 %), I performed regression algorithms,
+  • **Data Analysis on Polluted Datasets**: For each experiment and for each percentage of introduced outliers (5 % to 50 %), I performed regression algorithms,
   subsequently comparing the results with those obtained after the cleaning phase.
 
   • **Data Preparation**: In this phase, outliers were detected and removed using the
@@ -152,7 +152,7 @@ down here.
 ###  Data Analysis on Polluted Datasets
 After introducing the outliers, we assess the performance of various regression algorithms
 on the ”dirty” datasets using two different metrics: performance and distance between
-train and test. (speed is not considered since is not relevant for the analysis we are conducting). We evaluate these metrics across five different regression algorithms (”LinearRegressor,” ”BayesianRidge,” ”SVMRegressor,” ”KNNRegressor,” and ”MLPRegressor”).
+train and test. (speed is not considered since is not relevant for the analysis we are conducting). We evaluate these metrics across five different regression algorithms (”LinearRegressor,” ”BayesianRidge,” ”SVMRegressor,” ”KNNRegressor,” and ”MLPRegressor”).
 
 ```
 # D: DATA ANALYSIS ON POLLUTED DATASETS
@@ -185,7 +185,7 @@ shaped clusters are more accurately identified and isolated.
 • **Easily tunable**: DBSCAN’s parameters, such as epsilon (neighborhood distance)
 and minimum points, can be adjusted to accommodate different characteristics of
 the data. This adaptability proves beneficial when dealing with varying densities
-and sizes of outliers as in our case when dealing with different percentages of outliers introduced ( 5 % to 50 %). In my case the perfect fit are: - epsilon = 0.9 -
+and sizes of outliers as in our case when dealing with different percentages of outliers introduced ( 5 % to 50 %). In my case the perfect fit are: - epsilon = 0.9 -
 min samples = 5
 
 Below is the implementation of the outliers removal function.
@@ -208,9 +208,9 @@ def data_preparation (X ,y , n_features ) :
 
 ```
 ### Data Analysis on Cleaned Dataset
-After having removed the outliers, we assess the performance of various regression algorithms on the ”cleaned” datasets using two different metrics: performance and distance
+After having removed the outliers, we assess the performance of various regression algorithms on the ”cleaned” datasets using two different metrics: performance and distance
 between train and test. (speed is not considered since is not relevant for the analysis
-we are con- ducting). We evaluate these metrics across five different regression algorithms (”Linear- Regressor,” ”BayesianRidge,” ”SVMRegressor,” ”KNNRegressor,” and
+we are con- ducting). We evaluate these metrics across five different regression algorithms (”Linear- Regressor,” ”BayesianRidge,” ”SVMRegressor,” ”KNNRegressor,” and
 ”MLPRegressor”).
 
 
