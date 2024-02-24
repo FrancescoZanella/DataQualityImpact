@@ -86,7 +86,7 @@ To implement the pipeline for each of the 10 experiments, i followed these steps
   the datasets I reapply regression to compare the results with those obtained using
   the polluted datasets.
 
-![Failed to load image](URL)
+![Failed to load image]([URL](https://github.com/FrancescoZanella/DataQualityImpact/blob/main/images/implementation.png))
 
 ### Data Pollution
 The data pollution function is used to contaminate the dataset by adding outliers to it.
